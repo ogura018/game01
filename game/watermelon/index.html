@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>すいか割り</title>
+    <style>
+
+        body{
+            background-color: aquamarine;
+        }
+
+        #suika, #cut{
+            width:20%;
+            position: relative;
+            top: 20px;
+            display: none;
+        }
+        #arrow{
+            width: 2%;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            display: none;
+        }
+        h1{
+            text-align: center;
+        }
+
+        button{
+            position: relative;
+            left: 50%;
+            bottom: 20px;
+        }
+
+
+
+        #text{
+            display: none;
+            position: relative;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">すいか割り</h1>
+    <button id="start" type="submit">スタート</button>
+<img src="suika.png" alt="" id="suika">
+<img src="./suika_cut.png" alt="" id="cut">
+<img src="./arrow.svg" alt="" id="arrow">
+<p id="text">clear</p>
+
+<script>
+    let _move = 1;
+    let _key = 0;
+    let _suika = document.getElementById('suika');
+    let _btn = document.getElementById('start');
+    let _title = document.getElementById('title');
+    let _text = document.getElementById('text');
+    let _arrow = document.getElementById('arrow');
+    let i = 0
+
+
+
+        // var countUp = 0;
+
+            let a = 1;
+    document.addEventListener('click',function(){
+        _arrow.style.position = 'relative';
+        let timer = setInterval(countUp, 5);
+
+        function countUp() {
+            for (let i = 0; i < 1; i++) {
+                console.log(a++);
+                _arrow.style.bottom = 20 + 'px';
+                    if (a == 51) {
+                    clearInterval(timer);
+
+                }
+
+            }
+        }
+
+        _arrow.style.bottom = 20 + a + 'px';
+    });
+
+        _arrow.style.position = 'fixed';
+
+
+
+
+
+
+    _btn = document.addEventListener('click', function(){
+
+    title.style.display = 'none';
+    start.style.display = 'none';
+    arrow.style.display = 'block';
+    suika.style.display = 'block';
+
+
+    });
+
+/*
+        _arrow = document.addEventListener('click', function () {
+
+            arrow.style.position = 'absolute; top: 500px';
+            _btn.style.display = 'block';
+            btn.innerHTML = 'はじめから'
+
+        });
+
+            _btn = document.addEventListener('click', function(){
+
+            })
+            */
+
+
+
+</script>
+
+<noscript>ブラウザの設定からJavaScriptの実行を許可して下さい。<br><a href="https://support.google.com/chrome/search?q=JavaScript&from_promoted_search=true">Google Chromeでの設定方法はこちら</a></noscript>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ボール避けゲーム</title>
+    <style>
+        img#man{
+            position: absolute; bottom: 20px;
+            width: 50px;
+               }
+    </style>
+</head>
+<body>
+    <p#score>0pts.</p>
+    <img src="./images/man.svg" alt="" id="man" style="left: 0px;">
+    <img src="./images/ball1.png" alt="" id="b1">
+    <img src="./images/ball2.png" alt="" id="b2">
+    <img src="./images/ball3.png" alt="" id="b3">
+    <script>
+        let _x = 0;
+        let _move = 1;
+        let p = document.getElementById('man');
+        let ball1 = document.getElementById('b1');
+        let ball2 = document.getElementById('b2');
+        let ball3 = document.getElementById('b3');
+        let scoreboard = document.getElementById('score');
+
+        window.addEventListener('keydow', function(event) {
+            let _key = event.keyCode;
+            if( _key == 37){
+                _x = _x - _move;
+            } else if(_key == 39){
+                _x = _x + _move;
+            }
+            man.style.top = _x + "px"
+
+
+        });
+
+
+/*
+        var score = 0;
+        var ball1posY = element.getAttribute()
+
+        class Collider {
+            constructor(type, x, y) {
+                this._type = type;
+                this.x = x;
+                this.y = y;
+            }
+        }*/
+
+    </script>
+</body>
+</html>
